@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="15" />
+    <link href="https://unpkg.com/nes.css@2.3.0/css/nes.min.css" rel="stylesheet" />
+    <style>
+        body {
+            display: flex;
+            min-height: 100vh;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .box {
+            display: flex;
+            flex-direction: column;
+        }
+    </style>
+    <title>Weather Status</title>
+</head>
+
+<body>
+    <!-- <div class="paper container text-center margin-top-large">
+        <h1>Water <span class="badge secondary">{{.Status.Water}}</span> {{.WaterStatus}}</h1>
+        <h1>Wind <span class="badge">{{.Status.Wind}}</span> {{.WindStatus}}</h1>
+      </div> -->
+    <div class="nes-container with-title is-centered">
+        <p class="title nes-text is-primary">Weather Status</p>
+        <div style="display: flex;">
+            <div class="box">
+                <span class="nes-text is-primary">{{.WaterStatus}}</span>
+                <a href="#" class="nes-badge is-splited">
+                    <span class="is-primary">Water</span>
+                    <span class="is-dark">{{.Status.Water}}%</span>
+                </a>
+            </div>
+            <div style="width: 10px;"></div>
+            <div class="box">
+                <span class="nes-text is-success">{{.WindStatus}}</span>
+                <a href="#" class="nes-badge is-splited">
+                    <span class="is-success">Wind</span>
+                    <span class="is-dark">{{.Status.Wind}}%</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
